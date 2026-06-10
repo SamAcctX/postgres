@@ -1,6 +1,6 @@
 {
   "19": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "19~beta1-1.pgdg13+1",
@@ -13,8 +13,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "19~beta1-1.pgdg12+1",
@@ -29,7 +29,7 @@
     "major": 19
   },
   "18": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "18.4-1.pgdg13+1",
@@ -42,8 +42,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "18.4-1.pgdg12+1",
@@ -58,7 +58,7 @@
     "major": 18
   },
   "17": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "17.10-1.pgdg13+1",
@@ -71,8 +71,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "17.10-1.pgdg12+1",
@@ -87,7 +87,7 @@
     "major": 17
   },
   "16": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "16.14-1.pgdg13+1",
@@ -100,8 +100,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "16.14-1.pgdg12+1",
@@ -116,7 +116,7 @@
     "major": 16
   },
   "15": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "15.18-1.pgdg13+1",
@@ -129,8 +129,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "15.18-1.pgdg12+1",
@@ -145,7 +145,7 @@
     "major": 15
   },
   "14": {
-    "alpine": "3.23",
+    "alpine": "3.24",
     "debian": "trixie",
     "trixie": {
       "version": "14.23-1.pgdg13+1",
@@ -158,8 +158,8 @@
     "variants": [
       "trixie",
       "bookworm",
-      "alpine3.23",
-      "alpine3.22"
+      "alpine3.24",
+      "alpine3.23"
     ],
     "bookworm": {
       "version": "14.23-1.pgdg12+1",

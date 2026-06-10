@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.22
+FROM alpine:3.24
 
 # 70 is the standard uid/gid for "postgres" in Alpine
 # https://git.alpinelinux.org/aports/tree/main/postgresql-common/postgresql-common.pre-install?h=3.22-stable
@@ -52,13 +52,13 @@ ENV LANG en_US.utf8
 
 RUN mkdir /docker-entrypoint-initdb.d
 
-ENV PG_MAJOR 15
-ENV PG_VERSION 15.18
-ENV PG_SHA256 11df0df97fe3ea4ba9a791faaf39cee1d2fe571e78885b5b55d8517d27c323b4
+ENV PG_MAJOR 14
+ENV PG_VERSION 14.23
+ENV PG_SHA256 cc7216822b546330e29c2f91e123c8734a4c41795082145bb962aa712e8c94a5
 
 ENV DOCKER_PG_LLVM_DEPS \
-		llvm19-dev \
-		clang19
+		llvm21-dev \
+		clang21
 
 RUN set -eux; \
 	\
@@ -101,8 +101,6 @@ RUN set -eux; \
 		icu-dev \
 # https://www.postgresql.org/docs/14/release-14.html#id-1.11.6.5.5.3.7
 		lz4-dev \
-# https://www.postgresql.org/docs/15/release-15.html "--with-zstd to enable Zstandard builds"
-		zstd-dev \
 	; \
 	\
 	cd /usr/src/postgresql; \
@@ -114,9 +112,9 @@ RUN set -eux; \
 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
 	\
 # https://git.alpinelinux.org/aports/tree/community/postgresql15/APKBUILD?h=3.22-stable#n176 ("export LLVM_CONFIG")
-	export LLVM_CONFIG="/usr/lib/llvm19/bin/llvm-config"; \
+	export LLVM_CONFIG="/usr/lib/llvm21/bin/llvm-config"; \
 # https://git.alpinelinux.org/aports/tree/community/postgresql15/APKBUILD?h=3.22-stable#n180 ("older clang versions don't have a 'clang' exe anymore.")
-	export CLANG=clang-19; \
+	export CLANG=clang-21; \
 	\
 # configure options mostly copying Debian:
 # https://salsa.debian.org/postgresql/postgresql-common/-/blob/6e26b5107295170cc8731a3acbf13228ea15941e/server/postgresql.mk#L32
@@ -150,7 +148,6 @@ RUN set -eux; \
 		--with-perl \
 		--with-python \
 		--with-tcl \
-		--with-zstd \
 	; \
 	make -j "$(nproc)" world-bin; \
 	make install-world-bin; \
