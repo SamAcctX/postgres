@@ -123,6 +123,7 @@
       "arches": [
         "amd64",
         "arm64",
+        "loong64",
         "ppc64el"
       ]
     },
